@@ -88,6 +88,7 @@ import { ComponentSystem } from './components/system.js';
 import { ElementComponentSystem } from './components/element/system.js';
 import { JointComponentSystem } from './components/joint/system.js';
 import { LayoutChildComponentSystem } from './components/layout-child/system.js';
+import { TestComponentSystem } from './components/test/system.js';
 import { LayoutGroupComponentSystem } from './components/layout-group/system.js';
 import { LightComponentSystem } from './components/light/system.js';
 import { ModelComponentSystem } from './components/model/system.js';
@@ -616,6 +617,7 @@ class Application extends EventHandler {
         this.systems.add(new SpriteComponentSystem(this));
         this.systems.add(new LayoutGroupComponentSystem(this));
         this.systems.add(new LayoutChildComponentSystem(this));
+        this.systems.add(new TestComponentSystem(this));
         this.systems.add(new ZoneComponentSystem(this));
 
         this._visibilityChangeHandler = this.onVisibilityChange.bind(this);
